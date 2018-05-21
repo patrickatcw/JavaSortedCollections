@@ -2,6 +2,7 @@ package com.me;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 //second class
@@ -10,7 +11,8 @@ public class StockList {
 
     //constructor
     public StockList() {
-        this.list = new HashMap<>();
+        //this.list = new HashMap<>();
+        this.list = new LinkedHashMap<>(); //to maintain alphabetical order for printout
     }
 
     //method to add stock items
@@ -62,7 +64,7 @@ public class StockList {
             double itemValue = stockItem.getPrice() * stockItem.quanityInStock();
 
             s = s + stockItem + ". There are " + stockItem.quanityInStock() + " in stock. Value of items: ";
-            s = s + itemValue + "\n";
+            s = s + String.format("%.2f",itemValue) + "\n"; //2 decimal points
             totalCost += itemValue;
         }
 

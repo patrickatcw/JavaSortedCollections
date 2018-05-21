@@ -54,8 +54,17 @@ package com.me;
             burgers : price 12.5. There are 2 in stock. Value of items: 25.0
             cup : price 0.5. There are 200 in stock. Value of items: 100.0
             Total stock value 5157.549999999999
-
              */
+
+            //fixed decimal point issue in stocklist class
+
+            //fixed order in stocklist
+
+            System.out.println("-----------------");
+
+            for (String s : stockList.Items().keySet()) {
+                System.out.println(s);
+            }
 
         }
     }
